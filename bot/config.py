@@ -2,12 +2,16 @@ import os
 
 PROXY = None
 #PROXY = 'socks5://user:password@host:port'
+if os.environ.get('PROXY', ''):
+    PROXY = os.environ.get('PROXY')
+
 URL_REGEXPS = [
         r"(http?s\:\/\/2ch\.hk\/(\w+)\/src\/(\d+)\/(\d+)\.webm)",
         r"(http\:\/\/localhost\/([\w-]+).webm)",
         r"(http\:\/\/localhost\/([\w-]+).mp4)",
         r"^(https?\:\/\/arhivach\.ng\/storage\/(.*)webm)$"
 ]
+
 BOT_TOKEN = os.environ.get('TG_TOKEN', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
 
 CRASH_MESSAGE = ('<b>Bot crashed. '

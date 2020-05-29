@@ -19,3 +19,9 @@ If string starts with `"y"`, crash report is disabled.
 
 Example usage:
 `docker run -d -t webmogrambot -e NO_REPORT="yes"`
+
+### `PROXY`
+Allows you to run bot via proxy, if you want. Supported only http and socks5 proxies.
+
+Example usage:
+`docker run -d -t webmogrambot -e PROXY="socks5://user:password@host:port"`
