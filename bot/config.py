@@ -8,7 +8,7 @@ URL_REGEXPS = [
         r"(http\:\/\/localhost\/([\w-]+).mp4)",
         r"^(https?\:\/\/arhivach\.ng\/storage\/(.*)webm)$"
 ]
-BOT_TOKEN = os.environ.get('TOKEN', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
+BOT_TOKEN = os.environ.get('TG_TOKEN', 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')
 
 CRASH_MESSAGE = ('<b>Bot crashed. '
                  'Send report to @hatkidchan or just ignore it</b>')
@@ -19,4 +19,4 @@ CONVERTING_MESSAGE = ('<i>Converting...</i>\n'
 UPLOADING_MESSAGE = '<i>Uploading...</i>'
 UPLOADED_MESSAGE = '<i>Video uploaded</i>'
 TEMP_PATH = 'tmp'
-NO_CRASHREPORT = os.environ.get('NO_REPORT', 'no').lower()[0] == 'y'
+NO_CRASHREPORT = os.environ.get('NO_REPORT', 'no').lower().startswith('y')
